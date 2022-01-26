@@ -27,9 +27,7 @@ export function Header() {
       marginTop="4"
       paddingX="6"
       alignItems="center"
-    >
-      { !isWideVersion && (
-        <IconButton
+    >{ !isWideVersion && (<IconButton
         aria-label="Open navigation"
           icon={<Icon as={RiMenuLine} />}
           fontSize="24"
@@ -39,11 +37,7 @@ export function Header() {
         >
 
         </IconButton>
-      ) }
-
-      <Logo />
-
-      { isWideVersion && <SearchBox /> }
+      ) }<Logo />{ isWideVersion && <SearchBox /> }
       <Flex alignItems="center" marginLeft="auto" >
         <NotificationsNav />
         <Profile showProfileData={isWideVersion} /> 
